@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background: url(fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+  
+}
+
+a{
+    font-family: 'Righteous', cursive;
+}
+
+h1{
+    font-family: 'Righteous', cursive;
+}
+
+th{
+    font-family: 'Righteous', cursive;
+}
+
+tr{
+    font-family: 'Righteous', cursive;
+}
+
+p{
+    font-family: 'Righteous', cursive;
+}

@@ -1,0 +1,64 @@
+h1{
+   position: relative;
+   margin-left: 10px;
+   margin-top: 6px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.397);
+    margin-top: 20px;
+    
+  }
+  
+  td, th {
+    border: 3px solid #0000001c;
+    text-align: left;
+    padding: 8px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .button {
+   
+    padding: 12px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.1s; /* Safari */
+    transition-duration: 0.1s;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  
+  .button1 {
+    background-color: rgba(255, 255, 255, 0); 
+    color: rgb(255, 0, 0); 
+    border: 4px  #ff0000;
+  }
+
+  .button1:hover {
+    background-color: rgb(255, 0, 0);
+    color: white;
+  }
+
+  .button2 {
+    background-color: rgba(255, 255, 255, 0); 
+    color: rgb(74, 252, 4); 
+    border: 4px rgb(74, 252, 4);
+  }
+
+  .button2:hover {
+    background-color: rgb(74, 252, 4);
+    color: white;
+  }
+
+  input[type=text] {
+    padding: 2px;
+    margin-top: 8px;
+    font-size: 12px;
+    border: none;
+  }
