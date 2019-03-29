@@ -1,0 +1,173 @@
+<app-header></app-header>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Hero/DH_W_S_FashionSneakers_ES1X_3._CB454265765_.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Hero/DH_W_S_FashionSneakers_ES1X_3._CB454265765_.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Hero/DH_W_S_FashionSneakers_ES1X_3._CB454265765_.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<section id="products" class ="mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let product of products">
+        <div class="card_product">
+          <div class="card">
+            <div class="card-body text-center">
+              <p>
+                <img class="img-fluid" src="{{product.imgProduct}}" alt="{{product.imgProduct}}">
+              </p>
+              <h4  routerLink="/product/{{product.id}}"  class="card-title" >{{product.name}}</h4>
+              <p class="card-text">
+                {{product.descripcion}}
+              </p>
+              <div class="container-precio">
+                <p>
+                  {{product.precio}}$
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<app-header></app-header>
+
+<body>
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <img [src]="images[0]" alt="Random first slide">
+      <div class="carousel-caption">
+        <h3>Bienvenidos a la Mandarina</h3>
+        <p>Disfruta nuestra nueva página</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[1]" alt="Random second slide">
+      <div class="carousel-caption">
+        <h3>Rápida y efectiva</h3>
+        <p>Interfaz intuitiva con el usuario</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[2]" alt="Random third slide">
+      <div class="carousel-caption">
+        <h3>Confiable y segura</h3>
+        <p>Compras seguras y rápidas</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+ 
+
+  <div class="row">
+      <div class="column">
+        <div class="card">
+          
+          <div class="logo"></div>
+          <p>Herramientas</p>
+          
+        </div>
+      </div>
+    
+      <div class="column">
+        <div class="card">
+          
+          <div class="logo"></div>
+          <p>Películas</p>
+          
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="card">
+          
+          <div class="logo"></div>
+          <p>Hogar</p>
+          
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="card">
+          
+          <div class="logo"></div>
+          <p>Tecnología</p>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="row1">
+        <div class="column1">
+          <img src="laptop.png" alt="Snow" style="width:100%">
+        </div>
+        <div class="column1">
+          <img src="laptop.png" alt="Forest" style="width:100%">
+        </div>
+        
+      </div>
+    
+-->
+
+<!--
+      
+<section id="books">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let book of books">
+        <div class="card_book">
+          <div class="card">
+            <div class="card-body text-center">
+              <p>
+                <img class="img-fluid" src="{{book.portada}}" alt="{{book.titulo}}">
+              </p>
+              <h4 routerLink="/book/{{book.id}}" class="card-title">{{book.titulo}}</h4>
+              <p class="card-text">
+                {{book.descripcion | truncateText:20}}
+              </p>
+              <div class="container-precio-idioma">
+                <p class="badge badge-info">
+                  {{book.precio}}€
+                </p>
+                <p class="badge badge-info">
+                  {{book.idioma}}
+                </p>
+              </div>
+              <a href="{{book.link_amazon}}" class="btn btn-block btn-primary" target="_blank">Buy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>-->

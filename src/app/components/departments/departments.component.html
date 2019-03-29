@@ -1,0 +1,27 @@
+<section id="products" class ="mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let product of products">
+        <div class="card_product">
+          <div class="card">
+            
+            <div class="card-body text-center"> 
+              <p>
+                <img class="img-fluid" src="{{product.imgProduct}}" alt="{{product.imgProduct}}">
+              </p>
+              <h4  routerLink="/product/{{product.id}}"  class="card-title" >{{product.name}}</h4>
+              <p class="card-text">
+                {{product.descripcion}}
+              </p>
+              <div class="container-precio">
+                <p>
+                  {{product.precio}}$
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

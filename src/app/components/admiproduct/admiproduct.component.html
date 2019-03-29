@@ -1,0 +1,51 @@
+
+<app-header></app-header>
+
+<section class="row ">
+  <div class="col">
+    <button class="btn btn-primary float-right mb-3" data-toggle="modal" 
+    data-target="#ModalProduct">Nuevo Producto</button>
+    <div role="group">
+      <button id="btnGroupDrop1" class="btn btn-primary float-right  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Menú 
+      </button>
+      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <a class="dropdown-item" routerLink= "/admiproduct"  >Gestionar Usuarios</a>
+        <a class="dropdown-item" routerLink= "/admiusers"  > Gestionar Estadisticas</a>
+      </div>
+    </div>
+
+
+        <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Oferta</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Departamentp</th>
+          <th scope="col" >Opciones</th>
+          <th scope="col" >&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; index as i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{product.name}}</td>
+          <td>{{product.descripcion}}</td>
+          <td>{{product.offer == 1 ? 'Si' : 'No' }}</td>
+          <td>{{product.precio}}</td>
+          <td>{{product.departamen }}</td>
+          <td>
+            <button class="btn btn-primary" data-toggle="modal" *ngIf="isAdmin == true" data-target="#ModalProduct" (click)="toUpdateProduct(product)">Actualizar</button>
+          </td>
+          <td>
+            <button class="btn btn-danger" (click)="toDeleteProduct(product.id)">Eliminar </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<app-modal></app-modal>

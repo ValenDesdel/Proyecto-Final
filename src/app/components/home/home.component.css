@@ -1,0 +1,185 @@
+#products {
+  border-radius: 0.25rem  !important;
+}
+section {
+  padding: 20px 0;
+}
+#products .card {
+  border: none;
+}
+.card_product {
+  position: relative;
+  -webkit-transform: rotateY(0deg);
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.card_product .card {
+  min-height: 312px;
+}
+
+p.card-text,
+h4.card-title {
+  min-height: 96px !important;
+}
+
+.card-title {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.card_product .card .card-body img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+div.container-precio{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+/*
+.logo{
+    width: 90%;
+    height: 200px;
+    background: url(laptop.png) no-repeat;
+    float: left;
+    margin-right: 450px;
+    background-size: 100%;
+} 
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side 
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding 
+  .row {margin: 0 -5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+  
+  /* Clear floats after the columns 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns 
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  /*_-----------------------------------------
+
+    .column1 {
+      float: left;
+      width: 50%;
+      padding: 0 10px;
+    }
+    
+    /* Remove extra left and right margins, due to padding 
+    .row1 {margin: 0 -5px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+  }
+    
+    /* Clear floats after the columns 
+    .row1:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive columns 
+    @media screen and (max-width: 600px) {
+      .column1 {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+  
+  
+  /* Style the counter cards 
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #03030348;
+  }
+
+  .card p{
+      color: white;
+  }
+*/
+
+
+
+
+ /* books {
+    border-radius: 0.25rem;
+    background: #f9f9f9 !important;
+  }
+  section {
+    padding: 20px 0;
+  }
+  #books .card {
+    border: none;
+    background: #fff;
+  }
+  .card_book {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+  }
+  
+  .card_book .card {
+    min-height: 312px;
+  }
+  
+  p.card-text,
+  h4.card-title {
+    min-height: 96px !important;
+  }
+  
+  .card-title {
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .card_book .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  
+  div.container-precio-idioma{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  */

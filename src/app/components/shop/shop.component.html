@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+
+<app-header></app-header>
+<br>
+<br>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <p>
+          <img src="{{product.imgProduct}}"  alt="{{product.imgProduct}}"  class="img-fluid">
+        </p>
+        <h4 class="card-title">{{product.name}}</h4>
+              <p class="card-text">
+                {{product.descripcion}}
+              </p>
+              <button routerLink = "/pay/{{product.id}}" class="btn">Comprar</button>
+      </div>
+    </div>
+    </div>
+</body>
+</html>

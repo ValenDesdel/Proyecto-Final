@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+</head>
+<body>
+  
+
+<div class="topnav">
+  <a class="active" routerLink= "/home">La Mandarina</a>
+  <!--VEAMOS:{{IsLogged}}-->
+  <a routerLink= "/login" *ngIf="!IsLogged">Ingresar</a>
+  <a routerLink= "/profile" *ngIf="IsLogged" >Perfil</a>  
+  <a routerLink= "/register" *ngIf="!IsLogged">Registar</a>
+  <a routerLink= "/cart" *ngIf="!isAdmin" >Carrito</a>
+  <a routerLink= "/offer" >Ofertas</a>
+  <a routerLink= "/offer" *ngIf="!isAdmin">Deseos</a>  
+  <a routerLink= "/login" (click)= "onLogout()" *ngIf="IsLogged">Salir</a>
+  <div role="group">
+    <a id="btnGroupDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Departamentos
+    </a>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <a class="dropdown-item" routerLink= "/departments"  (click)="getNum('0')">Cocina</a>
+      <a class="dropdown-item" routerLink= "/departments"  (click)="getNum('1')">Baño</a>
+      <a class="dropdown-item" routerLink= "/departments"  (click)="getNum('2')">Sala</a>
+      <a class="dropdown-item" routerLink= "/departments"  (click)="getNum('3')">Comedor</a>
+    </div>
+  </div>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Buscar " name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+
+
+</body>
+</html>

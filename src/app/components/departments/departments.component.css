@@ -1,0 +1,42 @@
+#products {
+    border-radius: 0.25rem  !important;
+  }
+  section {
+    padding: 20px 0;
+  }
+  #products .card {
+    border: none;
+  }
+  .card_product {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+  }
+  
+  .card_product .card {
+    min-height: 312px;
+  }
+  
+  p.card-text,
+  h4.card-title {
+    min-height: 96px !important;
+  }
+  
+  .card-title {
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .card_product .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  
+  div.container-precio{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  

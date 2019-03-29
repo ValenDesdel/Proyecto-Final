@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="login.component" href="login.component.scss">
+        <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    </head>
+<!--Header-->
+<app-header></app-header>
+<!--Header-->
+
+  <!--Login-->
+  <form action="/action_page.php" (submit)="onLoginEmail()">
+    <div class="logo"></div>
+  
+    <div class="container">
+      <label for="uname"><b>Usuario</b></label> 
+      <br> <!--[(ngModel)]="email"-->
+      <input type="email"  [(ngModel)]="email"  placeholder="Ingresar Usuario" name="uname" required>
+      <br>
+      <label for="psw"><b>Ingresar Contraseña</b></label> 
+      <br>
+      <input  type="password" [(ngModel)]="password"  placeholder="Ingresar Contraseña" name="psw" required>
+      <br>  
+      <button class="btn" type="submit" >Ingresar</button> 
+      <br>
+      <button class="btnGoogle" (click)= "onLoginGoogle()"  type="submit" >Ingresar Con Google</button> 
+      <br>
+      <label> 
+        <input type="checkbox" checked="checked" name="remember"> Recuerdame
+      </label>
+    </div>
+  
+    <div class="container">
+      <button type="button" class="cancelbtn">Cancelar</button>
+      <span class="psw">¿Eres Nuevo? <a routerLink="/register" >REGISTRATE </a></span>
+    </div>
+
+    
+  </form>
+  <!--Login-->
+
+  
+
+</html>
