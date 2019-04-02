@@ -12,7 +12,10 @@ section {
   -webkit-transform: rotateY(0deg);
   z-index: 2;
   margin-bottom: 30px;
+  
 }
+
+
 
 .card_product .card {
   min-height: 312px;
@@ -24,20 +27,25 @@ h4.card-title {
 }
 
 .card-title {
-  color: #007bff;
+  color: #fc7100;
   cursor: pointer;
 }
 
 .card_product .card .card-body img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
 }
 
 div.container-precio{
   display: flex;
   justify-content: space-between;
+  color: rgb(6, 175, 6);
+  padding: 1px;
+  
 }
+
+
 
 
 

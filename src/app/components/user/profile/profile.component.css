@@ -1,7 +1,9 @@
 
 .main-section {
   border: 1px solid #f59528;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.411);
+  border-radius: 50px;
+
 }
 .profile-header {
   background: #ff7300;
@@ -12,8 +14,17 @@
 }
 
 h1 {
-  font-size: 15pt;
-  color: #20bcd5;
+  font-size: 19pt;
+  color: #00ddff;
+  text-align: center;
+  padding: 18px 0 18px 0;
+  margin: 0 0 10px 0;
+}
+
+.infousuario h1 {
+ 
+  font-size: 30pt;
+  color: #00ddff;
   text-align: center;
   padding: 18px 0 18px 0;
   margin: 0 0 10px 0;
@@ -22,6 +33,7 @@ h1 {
 p {
   padding: 0;
   margin: 0;
+  color: white;
 }
 
 section{
@@ -30,14 +42,27 @@ section{
   margin: 0 auto;
 }
 img {
+  margin-top: -90px;
   border: 3px solid white;
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 300px;
+  width: 300px;
 }
 .user-details h5 {
   margin: 15px 0 5px 0;
 }
+
+.logo{
+
+    background: url(perfil.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    margin-top: 200px;
+
+}
+    
 
 
 

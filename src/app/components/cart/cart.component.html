@@ -18,10 +18,11 @@
           <th>Opciones</th>
         </tr>
         <tr>
-          <td>Dell Laptop</td>
-          <td>999,99</td>
-          <td><input type="text" placeholder="Cantidad" ></td>
-          <td><button class="button button1">Borrar</button></td>
+          <tr *ngFor="let product of products; index as i">
+            
+            <td>{{product.name}}</td>
+            <td>{{product.precio}}</td>
+          
         </tr>
         
       </table>

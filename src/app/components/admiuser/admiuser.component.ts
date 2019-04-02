@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { DataApiService } from '../../services/data-api.service';
+import { ProductInterface } from '../../models/product';
+import { NgForm } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { UserInterface } from '../../models/user';
 
 @Component({
   selector: 'app-admiuser',
@@ -7,30 +13,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdmiuserComponent implements OnInit {
 
-  constructor() {
-    
-   }
+  constructor(private dataApi: DataApiService, private authService: AuthService) { }
+  private products: ProductInterface[];
+  public isAdmin: any = null;
+  public userID: string = null;
 
-   function () {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }       
-    }
-  }
 
   ngOnInit() {
+    
+    this.getUser();
   }
 
+  getUser() {
+    this.authService.isAuth().subscribe(auth => {
+      if (auth) {
+        this.userID = auth.uid;
+        this.authService.isAdmin(this.userID).subscribe(userRole => {
+          this.isAdmin = Object.assign({}, userRole.roles).hasOwnProperty('admi');
+          // this.isAdmin = true;
+        })
+      }
+    })
+  }
+
+
+
+
 }
+
+

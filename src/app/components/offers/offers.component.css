@@ -38,5 +38,12 @@
     display: flex;
     justify-content: space-between;
   }
+
+  h1{
+    margin-top: 10px;
+    margin-bottom: -20px;
+    text-shadow: 0px 1px white;
+    text-align: center;
+  }
   
   
