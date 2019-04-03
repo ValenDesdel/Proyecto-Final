@@ -17,11 +17,14 @@ export class AdmiuserComponent implements OnInit {
   private products: ProductInterface[];
   public isAdmin: any = null;
   public userID: string = null;
-
+  public users = [];
+  public user = "";
 
   ngOnInit() {
-    
-    this.getUser();
+    this.dataApi.getAllUsers().subscribe(users =>{
+    console.log("USERS", users);
+    this.users = users;
+    })
   }
 
   getUser() {
@@ -34,6 +37,14 @@ export class AdmiuserComponent implements OnInit {
         })
       }
     })
+  }
+
+  toDeleteUsers(idUsers: string): void {
+    //console.log('eliminas?', idProduct)
+    const secure = confirm('¿Desea eliminar el usuario?');
+    if (secure) {
+      this.dataApi.deleteProduct(idUsers);
+    }
   }
 
 

@@ -17,16 +17,14 @@
       <app-header></app-header>
 
       <table>
-          <tr>
-            <th>Correo</th>
-            <th>Usuario</th>
-            <th>Opciones</th>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td><button class="button button1">Inhabilitar cuenta</button><button class="button button1">Borrar cuenta</button></td>
-          </tr>
+        <tr *ngFor="let users of users; index as i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{users.email}}</td>
+          <td>{{users.id}}</td>
+          <td>
+            <button class="btn btn-danger" (click)="toDeleteUsers(users.id)">Eliminar Cuenta</button>
+          </td>
+        </tr>
           
         </table>
 

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { ProductInterface } from '../models/product';
+import { UserInterface } from '../models/user';
 import { Observable }from 'rxjs/internal/observable';'rxjs'
 import { map } from 'rxjs/operators';
 
@@ -10,6 +11,8 @@ import { map } from 'rxjs/operators';
 export class DataApiService {
 
   constructor(private afs: AngularFirestore) { 
+    this.usersCollection = this.afs.collection<UserInterface>('users');
+    this.users = this.usersCollection.valueChanges();
   }
 
   private productsCollection: AngularFirestoreCollection<ProductInterface>;
@@ -17,6 +20,23 @@ export class DataApiService {
   private productDoc: AngularFirestoreDocument<ProductInterface>;
   private product: Observable<ProductInterface>;
   public  chosenPoduct: ProductInterface= { id: null };
+
+  private usersCollection: AngularFirestoreCollection<UserInterface>;
+  private users: Observable<UserInterface[]>;
+
+  getAllUsers(){
+    return this.users = this.usersCollection.snapshotChanges()
+    .pipe( map (change => {
+      return change.map( action =>{
+        const data = action.payload.doc.data() as UserInterface;
+        data.id = action.payload.doc.id;
+        return data;
+      });
+    }));
+  }
+  addUsers(){}
+  updateUsers(){}
+  deleteUsers(){}
 
   getProducts(){
     this.productsCollection = this.afs.collection<ProductInterface>('products');
