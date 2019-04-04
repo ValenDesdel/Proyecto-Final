@@ -20,6 +20,8 @@ export class DataApiService {
   private productDoc: AngularFirestoreDocument<ProductInterface>;
   private product: Observable<ProductInterface>;
   public  chosenPoduct: ProductInterface= { id: null };
+  
+  //public  chosenUser: UserInterface  
 
   private usersCollection: AngularFirestoreCollection<UserInterface>;
   private users: Observable<UserInterface[]>;

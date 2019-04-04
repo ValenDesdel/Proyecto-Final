@@ -29,7 +29,7 @@ const routes: Routes = [
   {path: 'admiproduct', component: AdmiproductComponent},
   {path: 'admiuser', component: AdmiuserComponent},
   {path: 'admi', component: AdmiComponent},
-  {path: 'pay/:id', component: PayComponent, canActivate:[AuthGuard]},
+  {path: 'pay', component: PayComponent, canActivate:[AuthGuard]},
   {path: 'departments', component: DepartmentsComponent}, 
   {path: 'offer', component: OffersComponent}, 
   {path: '**', component: Page404Component}

@@ -13,15 +13,21 @@ export class DepartmentsComponent implements OnInit {
   constructor(private dataApi: DataApiService, private header: HeaderComponent) { }
 
   private products: ProductInterface[];
+  public product = [];
   public num="";
+
+  
 
   ngOnInit() {
     this.num = this.header.getNum(this.header.num);
     this.Deparments(this.num);
     console.log('OFERTAS', this.products);
+    
   }
 
   Deparments(num2: string) {
     this.dataApi.getdepartmen(num2).subscribe(departments => this.products = departments);
   }
+
+  
 }

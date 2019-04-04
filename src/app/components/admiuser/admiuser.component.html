@@ -1,4 +1,56 @@
-<!DOCTYPE html>
+
+<app-header></app-header>
+
+<section class="row ">
+  <div class="col">
+    <div role="group">
+      <button id="btnGroupDrop1" class="btn btn-primary float-right  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Menú 
+      </button>
+      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <a class="dropdown-item" routerLink= "/admiproduct"  >Gestionar Productos</a>
+        <a class="dropdown-item" routerLink= "/admiusers"  > Gestionar Estadisticas</a>
+      </div>
+    </div>
+
+
+        <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col" >&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let users of users; index as i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{users.email}}</td>
+          <td>
+            <button class="btn btn-primary" data-toggle="modal" >Hacer Administrador</button>
+          </td>
+          <td>
+            <button class="btn btn-danger" (click)="toDeleteUsers(users.id)">Eliminar Cuenta</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<app-modal></app-modal>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -31,4 +83,4 @@
       </div>
   
 </body>
-</html>
+</html>-->

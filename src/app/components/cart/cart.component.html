@@ -18,28 +18,17 @@
           <th>Opciones</th>
         </tr>
         <tr>
-          <tr *ngFor="let product of products; index as i">
-            
             <td>{{product.name}}</td>
             <td>{{product.precio}}</td>
-          
-        </tr>
-        
-      </table>
+        </tr>    
+    </table>
+      <th>
+        <button class="button2"><a routerLink= "/pay">Pagar</a></button>
+      </th>
 
-      <table>
-          <tr>
-            <th>Total</th>
-            <th></th>
-            
-          </tr>
-          <tr>
-            
-            <td>999,99</td>
-            <td><button class="button button2">Proceder a pagar</button></td>
-          </tr>
-          
-        </table>
+    <table>
+    </table>
+    
 
   
   

@@ -20,7 +20,7 @@ export class ModalComponent implements OnInit {
   saveProduct(productForm: NgForm): void {
     if (productForm.value.id == null) {
     console.log('QUE RAYOS PASA', productForm.value.id)
-      productForm.value.userUid = this.userID;
+      //productForm.value.userID = this.userID;
       this.dataApi.addPoduct(productForm.value);
     } else {
       this.dataApi.updateProduct( productForm.value);
